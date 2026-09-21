@@ -7,7 +7,7 @@ A Java application demonstrating **JDBC (Java Database Connectivity)** with a My
 ## 📁 Project Structure
 
 ```
-d:\code\class\Movie Ticket management system\
+.
 ├── database.sql                     # SQL setup script for MySQL
 ├── DBConnection.java                # JDBC Connection Manager (MySQL)
 ├── Movie.java                       # Movie Entity / Model Class
@@ -25,7 +25,7 @@ d:\code\class\Movie Ticket management system\
 ## 🛠️ Complete XAMPP & MySQL Database Setup Guide
 
 ### 1. Installing & Starting XAMPP
-1. Download and install **XAMPP** from [Apache Friends](https://www.apachefriends.org/). (Installed at `D:\Rdbms` or `C:\xampp`).
+1. Download and install **XAMPP** from [Apache Friends](https://www.apachefriends.org/).
 2. Open the **XAMPP Control Panel**.
 3. Next to **Apache** and **MySQL**, click **Start**.
    - Ensure the MySQL status turns green (running on port `3306`).
@@ -37,26 +37,26 @@ d:\code\class\Movie Ticket management system\
 #### Option A: Creating Database via phpMyAdmin (Web UI)
 1. Open your browser and go to `http://localhost/phpmyadmin/`.
 2. Click on the **SQL** tab at the top menu bar.
-3. Open the [`database.sql`](file:///d:/code/class/Movie%20Ticket%20management%20system/database.sql) file from this repository, copy its contents, and paste them into the SQL query box.
+3. Open the `database.sql` file from this repository, copy its contents, and paste them into the SQL query box.
 4. Click **Go** (bottom right).
-5. Alternatively, you can click the **Import** tab at the top, choose the [`database.sql`](file:///d:/code/class/Movie%20Ticket%20management%20system/database.sql) file from your folder, and click **Import**.
+5. Alternatively, you can click the **Import** tab at the top, choose the `database.sql` file from your folder, and click **Import**.
 
 #### Option B: Creating Database via MySQL Command Line / Terminal
-1. Open Command Prompt or PowerShell in XAMPP's MySQL bin directory (`D:\Rdbms\mysql\bin` or `C:\xampp\mysql\bin`):
+1. Open Command Prompt or PowerShell in XAMPP's MySQL bin directory (`<path-to-xampp>\mysql\bin`):
    ```cmd
-   cd D:\Rdbms\mysql\bin
+   cd <path-to-xampp>\mysql\bin
    mysql -u root
    ```
 2. Execute the script directly:
    ```sql
-   SOURCE d:/code/class/Movie Ticket management system/database.sql;
+   SOURCE <path-to-project>/database.sql;
    ```
 
 ---
 
 ### 3. Application Configuration
 
-The database credentials in [`DBConnection.java`](file:///d:/code/class/Movie%20Ticket%20management%20system/DBConnection.java) are set to default XAMPP credentials:
+The database credentials in `DBConnection.java` are set to default XAMPP credentials:
 - **URL**: `jdbc:mysql://localhost:3306/movie_ticket_db`
 - **Username**: `root`
 - **Password**: `""` *(empty string by default)*
@@ -67,7 +67,7 @@ The database credentials in [`DBConnection.java`](file:///d:/code/class/Movie%20
 
 ### Prerequisites: Java Development Kit (JDK) & MySQL Connector JAR
 - Ensure **JDK 17 or higher** is installed and configured in your environment (`JAVA_HOME` and `PATH`).
-- Verify libraries exist at `d:\code\class\jdbc\lib`.
+- Verify libraries exist at `<path-to-lib>`.
 
 ### Option 1: Command Line Interface (CLI)
 
@@ -79,10 +79,10 @@ The database credentials in [`DBConnection.java`](file:///d:/code/class/Movie%20
 #### Manual Compilation & Execution
 ```powershell
 # 1. Compile source files
-javac -cp ".;d:\code\class\jdbc\lib\*" *.java
+javac -cp ".;<path-to-lib>/*" *.java
 
 # 2. Run CLI Application
-java -cp ".;d:\code\class\jdbc\lib\*" MovieTicketManagementSystem
+java -cp ".;<path-to-lib>/*" MovieTicketManagementSystem
 ```
 
 ---
@@ -97,10 +97,10 @@ java -cp ".;d:\code\class\jdbc\lib\*" MovieTicketManagementSystem
 #### Manual Compilation & Execution
 ```powershell
 # 1. Compile source files
-javac -cp ".;d:\code\class\jdbc\lib\*" *.java
+javac -cp ".;<path-to-lib>/*" *.java
 
 # 2. Launch GUI Application
-java -cp ".;d:\code\class\jdbc\lib\*" MovieTicketGUI
+java -cp ".;<path-to-lib>/*" MovieTicketGUI
 ```
 
 ---
@@ -110,3 +110,4 @@ java -cp ".;d:\code\class\jdbc\lib\*" MovieTicketGUI
 You can inspect and manage movie listings and customer bookings created by either the CLI or GUI using:
 - **phpMyAdmin**: Start Apache & MySQL in XAMPP and open `http://localhost/phpmyadmin/`.
 - **MySQL Workbench / DBeaver**: Connect to `localhost:3306` with user `root` (no password).
+
