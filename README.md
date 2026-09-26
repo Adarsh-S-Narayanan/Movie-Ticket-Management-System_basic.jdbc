@@ -8,6 +8,7 @@ A Java application demonstrating **JDBC (Java Database Connectivity)** with a My
 
 ```
 .
+├── lib/                             # JAR libraries (MySQL connector & JavaFX)
 ├── database.sql                     # SQL setup script for MySQL
 ├── DBConnection.java                # JDBC Connection Manager (MySQL)
 ├── Movie.java                       # Movie Entity / Model Class

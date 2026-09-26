@@ -1,5 +1,5 @@
 @echo off
-set "LIB_DIR=d:\code\class\jdbc\lib"
+set "LIB_DIR=%~dp0lib"
 set "CP=.;%LIB_DIR%\mysql-connector-j-9.2.0.jar;%LIB_DIR%\javafx-base-21.0.2-win.jar;%LIB_DIR%\javafx-base-21.0.2.jar;%LIB_DIR%\javafx-controls-21.0.2-win.jar;%LIB_DIR%\javafx-controls-21.0.2.jar;%LIB_DIR%\javafx-graphics-21.0.2-win.jar;%LIB_DIR%\javafx-graphics-21.0.2.jar"
 
 echo Compiling Java source files...
